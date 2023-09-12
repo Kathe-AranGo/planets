@@ -1,0 +1,40 @@
+---
+title: "R Markdown datascience"
+output:
+  pdf_document: default
+  word_document: default
+  html_document: default
+date: "2023-09-07"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE) 
+#include equal to FALSE means "don't print this parte in my final version"
+# what is before the :: is the package name
+# what is after de :: is the function for that package
+# For TITLEs... # is level one, ## is level two (section title) and 0 #s means regular text
+# <> means that what is inside is a webside
+# ** (two stars) means bold
+# * (one star) means italics
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+# cars is a dataset in R so I'm saying to included in my document a summary (Min, Media, Mean, Max, etc.) of those data.
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
