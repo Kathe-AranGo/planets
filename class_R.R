@@ -36,3 +36,16 @@ x <- matrix (data = 1:3,
 # rownames (matrixname) <- c("row1", "row2", "row3")
 # colnames (matrixname) <- c("col1", "col2", "col3")
 print(x)
+
+## MISSING VALUES
+
+v_na = c(1,2,3,NA)
+mean (v_na)
+mean (v_na, na.rm = TRUE) # most math function has 'na.rm' option, but it's set to FALSE by default
+# To calculate statistich function, be sure to set 'na.rm' as TRUE!
+v_na = NA
+v_na == NA
+is.na(v_na)
+which(is.na(v_na)) # it gives the position of the NA in the vector, in this case, the forth
+
+
