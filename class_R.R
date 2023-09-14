@@ -90,4 +90,14 @@ x[x %% 2 != 0] # Modulus (x mod 2). It will give me odd numbers
                # If I want the even numbers the right notation should be "==0"
                # With the exclamation mark, it means "not equal" to 0
                # i.e. for !FALSE, the result is TRUE
+x[factor("b")] # result is 1
+x[factor("e")] # result is 1
 
+# For R it doesn't really matter what number is in the position "e" or "b", 
+# for it, they're all just integer 
+
+## Lists
+x = list (1:3, "a", 4:6)
+x[1]
+x[[1]]
+x[2]
