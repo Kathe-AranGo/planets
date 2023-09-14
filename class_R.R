@@ -48,4 +48,35 @@ v_na == NA
 is.na(v_na)
 which(is.na(v_na)) # it gives the position of the NA in the vector, in this case, the forth
 
+## Factor
 
+v_f = factor(v_seasons <- c("spring","summer","fall","winter")) # DON'T use equal sign "=" here
+# This is equal to have:
+# v_seasons <- c("spring","summer","fall","winter") 
+# v_f = factor(v_seasons) 
+# the function "factor" organized the levels in alphabetic order by default
+v_f2 = factor(c("spring","fall"), levels = v_seasons)
+table(v_f2)
+v_f3 = ordered(c("spring","fall","summer"), levels = v_seasons)
+table(v_f3)
+v_f3
+# ALSO... "factor" is an integer 
+as.character(v_f) # if we wanted it to behave as a character 
+# as.'something' means we're converting something to a different one
+# In that sense, "as.integer" is also possible
+
+## Dates
+Sys.Date()
+
+date <- as.Date("1969-09-14")
+# 1970-01-01 is the default, it gives us a result of 0 in we unclass it
+unclass(date) # It will tell us how many days have passed sin the default date
+              # The result will be 19614 if we set it at 2023-09-14 (today's date)
+              # The result will be -109 if we set it before the standard date, e.g. 1969-09-14
+
+## Date-Times
+now_ct <- as.POSIXct("2023-09-14 9:52", tz = "US/Central")
+now_ct
+unclass(now_ct) # We have time here so It'll tell us how many seconds have passed since the default date
+
+## Subsetting
