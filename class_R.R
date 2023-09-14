@@ -80,3 +80,14 @@ now_ct
 unclass(now_ct) # We have time here so It'll tell us how many seconds have passed since the default date
 
 ## Subsetting
+x = c(1,2,3,4,5)
+x[c(1,5)] # Things in the square brackets tell the program the locations I want it to give me back
+x[c(-1,-4)]
+# We cannot mix negative and positive numbers for subsetting. e.g. x[c(-1,3)]
+x[c(TRUE,FALSE,TRUE,FALSE,TRUE)]
+x[c(TRUE,FALSE)] # It does a recycle process
+x[x %% 2 != 0] # Modulus (x mod 2). It will give me odd numbers
+               # If I want the even numbers the right notation should be "==0"
+               # With the exclamation mark, it means "not equal" to 0
+               # i.e. for !FALSE, the result is TRUE
+
