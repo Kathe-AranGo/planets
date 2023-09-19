@@ -136,4 +136,51 @@ df$x ==3
 
 #### CONDITIONAL STATEMENTS
 
-## 
+### if... else...
+## Syntax:
+# statement is a single R statement or a compound statement 
+  # (a group of R statements enclosed in curly braces { } and separated by semicolons).
+    # cond is an expression that resolves to TRUE or FALSE.
+    # expr is a statement that evaluates to a number or character string.
+    # seq is a sequence of numbers or character strings.
+
+# nested if else
+a <- 0.33 # change it for 4, 5 and 0.33
+if (a %% 2 == 0) {
+  b <- a * -1
+} else {
+  if (a %% 2 == 1) {
+    b <- a ^ 2
+  } else {
+    b <- a * 10
+  }
+}
+b
+
+# Define your own categories
+small <- 1:5
+medium <- 6:10
+large <- 11:15
+
+a <- 16
+if (a %in% small) {
+  b <- 'Small number'
+} else if (a %in% medium) {
+  b <- 'Medium Number'
+} else if (a %in% large) {
+  b <- 'Large number'
+} else {
+  b <- 'Number out of range'
+}
+b
+
+### ifelse
+
+## ifelse(cond, statement for TRUE, statement for FALSE)
+
+a=0.33 # change for 5, 0.33, and 4
+ifelse(a %% 2 == 0, b <- a * -1, b <- a ^ 2)
+
+## Vectorization
+# ifelse is faster than the for loop
+a=c(0.33,4,5)
