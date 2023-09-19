@@ -101,3 +101,39 @@ x = list (1:3, "a", 4:6)
 x[1]
 x[[1]]
 x[2]
+x[]
+x[0]
+
+## Matrix and Arrays
+
+a <- matrix (1:9, nrow = 3)
+colnames(a) <- c("col_1","col_2","col_3")
+rownames(a) <- c("row_1","row_2","row_3")
+
+a[1:2, ] # after the comma is empty so it will give me back "everything"
+         # before the comma we have a positive integer so it will "include" the numbers I specified
+a[c(TRUE,FALSE,TRUE), c("col_3","col_1")]
+a[0, -2] # a zero inside the square bracket will give us "zeroness"... nothing
+a[1, ]
+class(a[1, ]) # R will simplify the result to the lowest level possible 
+class(a)
+# How to avoid this automatic simplification of the results? set drop to FALSE
+# This's ONLY for matrices
+a[1, , drop = FALSE]
+class(a[1, , drop = FALSE])
+a[]
+a[c(1,5,9)] # It'll look into the matrix as it's a big vector and will subset the 1st, 5th, and 9th
+
+a[a %% 2 == 0]
+a2 = a
+a2[a2 %% 2 ==0] = -1 # It'll replace all the even numbers for a -1
+upper.tri(a)
+a[upper.tri(a)]
+
+(df = data.frame(x = 1:5, y = rnorm(5), z = letters[1:5]))
+df[df$x ==3, ]
+df$x ==3
+
+#### CONDITIONAL STATEMENTS
+
+## 
